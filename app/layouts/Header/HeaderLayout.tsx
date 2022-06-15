@@ -6,7 +6,7 @@ import { Item } from './components/Item';
 import { ChangeLanguage } from './components/ChangeLanguage';
 
 export const HeaderLayout = () => {
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState<number | null>(null);
 
   return (
     <div className={styles.header}>
@@ -25,30 +25,6 @@ export const HeaderLayout = () => {
             onClick={(id) => setActive(id)}
           />
         ))}
-
-        {/* <div className={styles.header_btnBlog_item}>
-                    <Internet />
-                </div>
-
-                <div className={styles.header_btnBlog_item}>
-                <Filter />
-</div>
-
-<div className={styles.header_btnBlog_item}>
-                <Call />
-</div>
-
-<div className={styles.header_btnBlog_item}>
-                <Info />
-</div>
-
-<div className={styles.header_btnBlog_item}>
-                <Profile />
-</div>
-
-<div className={styles.header_btnBlog_item}>
-                <Logout />
-                </div> */}
       </div>
     </div>
   );

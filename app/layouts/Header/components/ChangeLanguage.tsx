@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Internet, Arrow } from 'assets/svg';
+import { Internet, ArrowDown } from 'assets/svg';
 import styles from './style.module.scss';
 import { theme } from 'setup/theme/theme';
 
@@ -36,7 +36,7 @@ export const ChangeLanguage = () => {
             {language}
           </span>
 
-          <Arrow
+          <ArrowDown
             color={
               active || focus ? theme.colors.blue[0] : theme.colors.grey[0]
             }

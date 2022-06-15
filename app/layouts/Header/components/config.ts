@@ -1,10 +1,6 @@
 import { Filter, Call, Info, Profile, Logout } from 'assets/svg/';
 
 export const menuList = [
-  // {
-  //     id:1,
-  //     icon: Internet ,
-  // },
   {
     id: 1,
     icon: Filter,

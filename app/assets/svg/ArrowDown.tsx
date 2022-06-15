@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Arrow = (props) => {
+export const ArrowDown = (props) => {
   const { color } = props;
   return (
     <svg

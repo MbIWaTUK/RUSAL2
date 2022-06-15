@@ -12,4 +12,5 @@ export * from './Location';
 export * from './Clipboard';
 export * from './Chat';
 export * from './Help';
-export * from './Arrow';
+export * from './ArrowDown';
+export * from './ArrowLeft';
