@@ -1,22 +1,20 @@
-import { HeaderLayout } from "layouts/Header/HeaderLayout"
-import { MenuLayout } from "layouts/Menu/MenuLayout"
-import React from "react"
-import styles from "./style.module.scss"
+import { HeaderLayout } from 'layouts/Header/HeaderLayout';
+import { MenuLayout } from 'layouts/Menu/MenuLayout';
+import React from 'react';
+import styles from './style.module.scss';
 
-export const MainLayout=(props)=>{
-    const {children} = props
+export const MainLayout = (props) => {
+  const { children } = props;
 
-    return(
-        <div className={styles.mainLayout}>
-            <HeaderLayout />
+  return (
+    <div className={styles.mainLayout}>
+      <HeaderLayout />
 
-            <div className={styles.content}>
+      <div className={styles.content}>
+        <MenuLayout />
 
-                <MenuLayout />
-                
-                {children}
-            </div>
-            
-        </div>
-    )
-}
+        {children}
+      </div>
+    </div>
+  );
+};

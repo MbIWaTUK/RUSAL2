@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 process.noDeprecation = true;
 
@@ -25,8 +25,8 @@ module.exports = (options) => {
       port: 3001,
       liveReload: true,
     },
-    plugins: [...options.plugins,new MiniCssExtractPlugin()],
-    
+    plugins: [...options.plugins, new MiniCssExtractPlugin()],
+
     module: {
       rules: [
         {
@@ -47,13 +47,14 @@ module.exports = (options) => {
           // Preprocess our own .scss files
           // This is the place to add your own loaders (e.g. sass/less etc.)
           // for a list of loaders, see https://webpack.js.org/loaders/#styling
-           test: /\.scss$/, use: [ 
-            { loader: "style-loader" },  // to inject the result into the DOM as a style block
-            { loader: "css-modules-typescript-loader"},  // to generate a .d.ts module next to the .scss file (also requires a declaration.d.ts with "declare modules '*.scss';" in it to tell TypeScript that "import styles from './styles.scss';" means to load the module "./styles.scss.d.td")
-            { loader: "css-loader", options: { modules: true } },  // to convert the resulting CSS to Javascript to be bundled (modules:true to rename CSS classes in output to cryptic identifiers, except if wrapped in a :global(...) pseudo class)
-            { loader: "sass-loader" },  // to convert SASS to CSS
+          test: /\.scss$/,
+          use: [
+            { loader: 'style-loader' }, // to inject the result into the DOM as a style block
+            { loader: 'css-modules-typescript-loader' }, // to generate a .d.ts module next to the .scss file (also requires a declaration.d.ts with "declare modules '*.scss';" in it to tell TypeScript that "import styles from './styles.scss';" means to load the module "./styles.scss.d.td")
+            { loader: 'css-loader', options: { modules: true } }, // to convert the resulting CSS to Javascript to be bundled (modules:true to rename CSS classes in output to cryptic identifiers, except if wrapped in a :global(...) pseudo class)
+            { loader: 'sass-loader' }, // to convert SASS to CSS
             // NOTE: The first build after adding/removing/renaming CSS classes fails, since the newly generated .d.ts typescript module is picked up only later
-        ] ,
+          ],
         },
 
         {
@@ -114,7 +115,7 @@ module.exports = (options) => {
 
     resolve: {
       modules: ['node_modules', 'app'],
-      extensions: ['.ts', '.tsx', '.js', '.jsx', '.react.js',".css", ".scss"],
+      extensions: ['.ts', '.tsx', '.js', '.jsx', '.react.js', '.css', '.scss'],
       mainFields: ['browser', 'jsnext:main', 'main'],
       fallback: {
         domain: require.resolve('domain-browser'),
