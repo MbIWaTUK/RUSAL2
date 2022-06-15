@@ -1,0 +1,16 @@
+.header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    max-height: 74px;
+    padding: 12px 20px;
+}
+.header_btnBlog{
+    display:flex;
+    align-items: center;
+}
+.header_btnBlog_item{
+    margin: 0 5px;
+    cursor: pointer;
+}

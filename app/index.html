@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8" />
+
+    <!-- Make the page mobile compatible -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Allow installing the app to the homescreen -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Rusal Customer Care Service</title>
+  </head>
+
+  <body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- <script>
+      function detectBrowser() {
+        var sUsrAg = navigator.userAgent;
+        if (sUsrAg.indexOf('Firefox') > -1) {
+          var version = sUsrAg.split('Firefox/')[1];
+
+          return { name: 'Mozilla Firefox', version: version };
+        }
+        if (sUsrAg.indexOf('OPR/') > -1) {
+          var version = sUsrAg.split('OPR/')[1];
+
+          return { name: 'Opera', version: version };
+        }
+        if (sUsrAg.indexOf('Trident') > -1) {
+          var version = sUsrAg.split('Trident/')[1].split(';')[0];
+
+          return { name: 'Microsoft Internet Explorer', version: version };
+        }
+        if (sUsrAg.indexOf('Edg') > -1) {
+          var version = sUsrAg.split('Edg/')[1];
+
+          return { name: 'Microsoft Edge', version: version };
+        }
+        if (sUsrAg.indexOf('Chrome') > -1) {
+          var version = sUsrAg.split('Chrome/')[1].split(' ')[0];
+
+          return { name: 'Google Chrome', version: version };
+        }
+        if (sUsrAg.indexOf('Safari') > -1) {
+          var version = sUsrAg.split('Safari/')[1].split(' ')[0];
+
+          return { name: 'Apple Safari', version: version };
+        }
+
+        return { name: 'unknown', version: '0.1' };
+      }
+    </script>
+
+    <script type="text/javascript">
+      var browser = detectBrowser();
+      var browsersToReject = ['Apple Safari', 'Microsoft Internet Explorer'];
+
+      for (let index = 0; index < browsersToReject.length; index++) {
+        var browserToReject = browsersToReject[index];
+
+        if (browserToReject === browser.name) {
+          document.body.onload = addElement;
+          function addElement() {
+            var text = 'The portal does not support the current browser';
+            var currentDate = new Date();
+            // месяц показывает с 0 до 11, поэтому надо добавить 1
+            var month = currentDate.getMonth() + 1;
+            var utcDate =
+              'time:' +
+              ' ' +
+              currentDate.getFullYear() +
+              '-' +
+              month +
+              '-' +
+              currentDate.getDate() +
+              ' ' +
+              currentDate.getHours() +
+              ':' +
+              currentDate.getMinutes();
+
+            var errorDiv = document.getElementById('app');
+            errorDiv.innerHTML =
+              '<p>' + text + ' ' + browser.name + ' ' + utcDate + '</p>';
+          }
+        }
+      }
+    </script> -->
+    <!-- Display a message if JS has been disabled on the browser. -->
+    <!-- <noscript
+      >If you're seeing this message, that means
+      <strong>JavaScript has been disabled on your browser</strong>, please
+      <strong>enable JS</strong> to make this app work.</noscript
+    > -->
+
+    <!-- The app hooks into this div -->
+    <div id="app"></div>
+    <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically injects all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this file. Don't add any assets here! (Check out webpack.dev.babel.js and webpack.prod.babel.js if you want to know more) -->
+  </body>
+</html>

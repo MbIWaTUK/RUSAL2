@@ -1,0 +1,97 @@
+{
+  "name": "rusal-customer-care",
+  "version": "3.0.0",
+  "description": "rusal-customer-care",
+  "private": true,
+  "engines": {
+    "npm": ">=5",
+    "node": ">=8.15.1"
+  },
+  "author": "UC Rusal",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.prod.babel.js --color --progress",
+    "build:clean": "rimraf ./build",
+    "start": "npx webpack-cli serve --config ./webpack/webpack.dev.babel.js  --color --progress",
+    "prod-build": "cross-env Y_MAP_KEY=5abd141d-3e33-4078-bfb5-4baa9cf8f6c3 HIDE_MAP_SWITCH=true MAP_KEY=AIzaSyANVWa7raaQMwC1FBCKZ3v5OaJMMMczj5A TRACKING_MAPS=Yandex npm run build",
+    "prod-build-external": "cross-env Y_MAP_KEY=5abd141d-3e33-4078-bfb5-4baa9cf8f6c3 HIDE_MAP_SWITCH=true MAP_KEY=AIzaSyANVWa7raaQMwC1FBCKZ3v5OaJMMMczj5A GA_ANALYTICS=true TRACKING_MAPS=Yandex npm run build",
+    "stage-build": "cross-env Y_MAP_KEY=5abd141d-3e33-4078-bfb5-4baa9cf8f6c3 MAP_KEY=AIzaSyANVWa7raaQMwC1FBCKZ3v5OaJMMMczj5A TRACKING_MAPS=Yandex npm run build",
+    "stage_dev-build": "cross-env Y_MAP_KEY=5abd141d-3e33-4078-bfb5-4baa9cf8f6c3 MAP_KEY=AIzaSyA3cHey7b3G1p13JFNmRbdz58TKlQALylM TRACKING_MAPS=Yandex npm run build"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE 10",
+    "IE 11"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:eslint:fix",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
+  },
+  "pre-commit": "lint:staged",
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
+  "dependencies": {
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/component": "^5.15.2",
+    "@loadable/server": "^5.15.2",
+    "@loadable/webpack-plugin": "^5.15.2",
+    "antd": "^4.21.1",
+    "css-modules-typescript-loader": "^4.0.1",
+    "domain-browser": "^4.22.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "node-sass": "^7.0.1",
+    "path-browserify": "^1.0.1",
+    "postcss-loader": "^7.0.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "recoil": "^0.7.3",
+    "sass": "^1.52.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-export-default-from": "^7.17.12",
+    "@babel/plugin-proposal-optional-chaining": "^7.17.12",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-syntax-jsx": "^7.17.12",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "@babel/plugin-transform-react-constant-elements": "^7.17.12",
+    "@babel/plugin-transform-react-inline-elements": "^7.16.7",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/register": "^7.17.7",
+    "babel-loader": "^8.2.5",
+    "compression-webpack-plugin": "^10.0.0",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.1.0",
+    "html-webpack-partials-plugin": "^0.8.0",
+    "html-webpack-plugin": "^5.5.0",
+    "path-browserify": "^1.0.1",
+    "react-app-polyfill": "^3.0.0",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "svg-url-loader": "^7.1.1",
+    "terser-webpack-plugin": "^5.3.3",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.7.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-middleware": "^5.3.3",
+    "webpack-dev-server": "^4.9.2",
+    "webpack-hot-middleware": "^2.25.1",
+    "webpack-pwa-manifest": "^4.3.0"
+  }
+}
