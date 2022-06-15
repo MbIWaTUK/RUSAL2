@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../style.module.scss';
-import { theme } from 'setup/theme/theme';
+import { theme } from '../../../../theme';
 
 export const Item = (props) => {
   const { Icon, active, id, onClick } = props;
@@ -15,7 +15,7 @@ export const Item = (props) => {
       onMouseLeave={() => setFocus(false)}
     >
       <Icon
-        color={focus || active ? theme.colors.blue[0] : theme.colors.grey[0]}
+        color={focus || active ? theme.colors.primary[0] : theme.colors.grey[0]}
       />
     </div>
   );
