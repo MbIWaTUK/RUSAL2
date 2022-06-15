@@ -1,6 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { theme } = require('../theme');
 
 process.noDeprecation = true;
 
@@ -67,8 +67,8 @@ module.exports = (options) => {
                 lessOptions: {
                   // If you are using less-loader@5 please spread the lessOptions to options directly
                   modifyVars: {
-                    'primary-color': '#1DA57A',
-                    'link-color': '#1DA57A',
+                    'primary-color': theme.colors.primary[0],
+                    'link-color': theme.colors.grey[0],
                     'border-radius-base': '2px',
                   },
                   javascriptEnabled: true,
