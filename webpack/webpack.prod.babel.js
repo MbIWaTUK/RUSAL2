@@ -104,7 +104,6 @@ module.exports = require('./webpack.base.babel')({
       hashDigest: 'hex',
       hashDigestLength: 20,
     }),
-
   ],
 
   performance: {

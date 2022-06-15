@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Routes } from './setup';
 import './setup/normalize.scss';
-import { ConfigProvider } from 'antd';
+import 'antd/dist/antd.less';
 
 export const App = () => {
-  const [theme, setTheme] = useState();
-
-  return (
-    // <ConfigProvider>
-    <Routes />
-    // </ConfigProvider>
-  );
+  return <Routes />;
 };
