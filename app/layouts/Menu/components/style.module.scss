@@ -1,0 +1,28 @@
+.menu_item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  :hover {
+    color: #05309e;
+  }
+}
+.menu_item_text {
+  padding-left: 10px;
+  color: #72818b;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+}
+.menu_item_active {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  color: #05309e;
+}

@@ -1,7 +1,5 @@
-import React from "react"
+import React from 'react';
 
-export const Documents=()=>{
-    return(
-        <div style={{width:"100%", backgroundColor:"#ffffff"}}></div>
-    )
-}
+export const Documents = () => {
+  return <div style={{ width: '100%', backgroundColor: '#ffffff' }}></div>;
+};
