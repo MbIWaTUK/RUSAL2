@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SelectInput } from 'components';
+import { SelectInput, DateInput } from 'components';
 
 export const Documents = () => {
   return (
@@ -9,6 +9,7 @@ export const Documents = () => {
         options={[{ value: '123123', label: '321312' }]}
         label="Select smth"
       />
+      <DateInput label="date" />
     </div>
   );
 };
