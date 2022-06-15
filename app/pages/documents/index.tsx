@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-
-import { SelectInput } from 'components';
 import { AdvancedSearch } from '../../layouts/AdvancedSearch/AdvancedSearch';
+import { SelectInput, DateInput } from 'components';
 
 export const Documents = () => {
   const [isOpenFilter, setIsOpenFilter] = useState(false);
@@ -16,6 +15,8 @@ export const Documents = () => {
       <button onClick={() => setIsOpenFilter(true)}>open filter</button>
 
       <AdvancedSearch isOpen={isOpenFilter} />
+
+      <DateInput label="date" />
     </div>
   );
 };
