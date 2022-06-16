@@ -25,6 +25,6 @@
     "removeComments": true,
     "sourceMap": true
   },
-  "include": ["app/**/*.d.ts", "app/**/*.ts", "app/**/*.tsx", "theme.ts"],
+  "include": ["app/**/*.d.ts", "app/**/*.ts", "app/**/*.tsx", "theme.js"],
   "exclude": ["node_modules"]
 }

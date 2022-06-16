@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Internet, ArrowDown } from 'assets/svg';
-import styles from './style.module.scss';
-import { theme } from 'setup/theme/theme';
+import styles from './style.module.less';
 
 export const ChangeLanguage = () => {
   const [active, setActive] = useState(false);

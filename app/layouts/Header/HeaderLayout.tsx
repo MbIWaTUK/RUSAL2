@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import { Logo } from 'assets/svg/';
 import { menuList } from './components/config';
 import { Item } from './components/Item';

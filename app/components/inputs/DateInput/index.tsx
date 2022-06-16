@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { DatePicker } from 'antd';
 
-import './styles.scss';
+import './styles.less';
 
 type Props = {
   children?: never;

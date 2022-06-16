@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Reload, Building } from 'assets/svg';
-import styles from './style.module.scss';
+import styles from './style.module.less';
 import { FormattedMessage } from 'react-intl';
 import { messages } from './messages';
 

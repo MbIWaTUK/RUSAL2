@@ -1,7 +1,8 @@
-import { MainLayout } from 'layouts/Main/MainLayout';
-import { Documents } from 'pages';
 import React from 'react';
 import { BrowserRouter, Routes as Switch, Route } from 'react-router-dom';
+
+import { MainLayout } from 'layouts/Main/MainLayout';
+import { Documents } from 'pages';
 
 export const Routes = () => {
   return (

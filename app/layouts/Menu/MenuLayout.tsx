@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+
+import styles from './style.module.less';
+
 import { ArrowLeft } from '../../assets/svg';
 import { links } from './components/config';
 import { Item } from './components/Item';
-import styles from './style.module.scss';
 
 export const MenuLayout = () => {
   const { pathname } = useLocation();

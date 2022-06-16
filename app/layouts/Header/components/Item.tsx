@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import styles from '../style.module.scss';
+import styles from '../style.module.less';
 import { theme } from '../../../../theme';
 
 type Props = {

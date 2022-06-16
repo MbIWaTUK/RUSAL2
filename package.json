@@ -38,29 +38,22 @@
     "babel-core": "7.0.0-bridge.0"
   },
   "dependencies": {
-    "@loadable/babel-plugin": "^5.13.2",
-    "@loadable/component": "^5.15.2",
-    "@loadable/server": "^5.15.2",
-    "@loadable/webpack-plugin": "^5.15.2",
     "antd": "^4.21.1",
-    "css-modules-typescript-loader": "^4.0.1",
     "domain-browser": "^4.22.0",
-    "immutability-helper": "^3.1.1",
-    "mini-css-extract-plugin": "^2.6.0",
-    "node-sass": "^7.0.1",
     "path-browserify": "^1.0.1",
-    "postcss-loader": "^7.0.0",
     "react": "18.1.0",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "18.1.0",
     "react-intl": "^6.0.4",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
-    "recoil": "^0.7.3",
-    "sass": "^1.52.3"
+    "recoil": "^0.7.3"
   },
   "devDependencies": {
+    "postcss-loader": "^7.0.0",
+    "react-scripts": "^5.0.1",
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/webpack-plugin": "^5.15.2",
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.5",
     "@babel/eslint-parser": "^7.18.2",
@@ -73,6 +66,7 @@
     "@babel/plugin-transform-react-constant-elements": "^7.17.12",
     "@babel/plugin-transform-react-inline-elements": "^7.16.7",
     "@babel/preset-env": "^7.18.2",
+    "mini-css-extract-plugin": "^2.6.0",
     "@babel/preset-react": "^7.17.12",
     "@babel/register": "^7.17.7",
     "@types/react": "^18.0.12",
@@ -86,7 +80,6 @@
     "less-loader": "^11.0.0",
     "path-browserify": "^1.0.1",
     "react-app-polyfill": "^3.0.0",
-    "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
     "svg-url-loader": "^7.1.1",
     "terser-webpack-plugin": "^5.3.3",
@@ -98,6 +91,7 @@
     "webpack-dev-middleware": "^5.3.3",
     "webpack-dev-server": "^4.9.2",
     "webpack-hot-middleware": "^2.25.1",
+    "css-modules-typescript-loader": "^4.0.1",
     "webpack-pwa-manifest": "^4.3.0"
   }
 }
