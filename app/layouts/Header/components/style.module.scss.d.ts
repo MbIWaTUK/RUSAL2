@@ -4,8 +4,12 @@ interface CssExports {
   'base': string;
   'container': string;
   'container_content': string;
+  'container_content_icon': string;
+  'container_content_icon_active': string;
   'container_content_language': string;
+  'container_content_language_active': string;
   'container_selectBlock': string;
+  'container_selectBlock_active': string;
   'container_selectBlock_text': string;
 }
 export const cssExports: CssExports;

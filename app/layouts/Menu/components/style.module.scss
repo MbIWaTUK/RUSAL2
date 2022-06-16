@@ -5,19 +5,56 @@
   cursor: pointer;
   text-decoration: none;
   width: 100%;
+  background-color: #ffffff;
+
+  .menu_item_icon {
+    path {
+      fill: #72818b;
+    }
+  }
+  .menu_item_text {
+    padding-left: 10px;
+    color: #72818b;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+  }
   :hover {
     color: #05309e;
   }
 }
-.menu_item_text {
-  padding-left: 10px;
-  color: #72818b;
-  width: 100%;
-  font-weight: 500;
-  font-size: 16px;
-  font-style: normal;
-}
 .menu_item_active {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  background-color: #f8faff;
+
+  .menu_item_icon {
+    path {
+      fill: #05309e;
+    }
+  }
+  .menu_item_text {
+    padding-left: 10px;
+    color: #05309e;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+  }
+  :hover {
+    color: #05309e;
+  }
+}
+.menu_item_icon {
+}
+.menu_item_text {
+}
+.menu_item_column {
   position: absolute;
   right: 0;
   top: 0;

@@ -4,6 +4,8 @@ interface CssExports {
   'menu': string;
   'menu_arrow': string;
   'menu_arrow_block': string;
+  'menu_arrow_isOpen': string;
+  'menu_isOpen': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

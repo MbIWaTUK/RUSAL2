@@ -4,6 +4,8 @@ interface CssExports {
   'header': string;
   'header_btnBlog': string;
   'header_btnBlog_item': string;
+  'header_btnBlog_item_icon': string;
+  'header_btnBlog_item_icon_active': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

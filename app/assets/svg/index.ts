@@ -1,4 +1,3 @@
-export * from './Filter';
 export * from './Internet';
 export * from './Logo';
 export * from './Call';
@@ -14,3 +13,7 @@ export * from './Chat';
 export * from './Help';
 export * from './ArrowDown';
 export * from './ArrowLeft';
+export * from './Reload';
+export * from './Building';
+export * from './Filter';
+// filter и building надо переименовать

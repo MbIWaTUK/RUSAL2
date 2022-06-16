@@ -1,12 +1,78 @@
+.base {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
 .container {
   display: flex;
   flex-direction: column;
-  position: 'absolute';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -500px;
+  transition: all 0.5s ease;
+  background: #ffffff;
+  border-radius: 20px 0px 0px 20px;
+  width: 315px;
+  padding: 20px;
+}
+.container_isOpen {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
   top: 0;
   bottom: 0;
   transition: all 0.5s ease;
   background: #ffffff;
   border-radius: 20px 0px 0px 20px;
   width: 315px;
-  padding: 20px;
+  padding: 20px 2px 20px 20px;
+  right: 0;
+}
+.container_content::-webkit-scrollbar {
+  width: 3px; /* ширина scrollbar */
+}
+.container_content::-webkit-scrollbar-track {
+  background: #ecf4fa; /* цвет дорожки */
+}
+.container_content::-webkit-scrollbar-thumb {
+  background-color: #60a3d5; /* цвет плашки */
+  border-radius: 2px; /* закругления плашки */
+  // border: 3px solid orange; /* padding вокруг плашки */
+}
+.container_content {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding-right: 14px;
+}
+.container_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 20px;
+  padding-right: 19px;
+}
+.container_header_label {
+  font-family: Roboto;
+  color: #223053;
+}
+.container_header_iconsBlock {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.container_header_iconsBlock_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #f1f1f1;
+  border-radius: 6px;
+  cursor: pointer;
 }

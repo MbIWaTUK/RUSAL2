@@ -1,6 +1,5 @@
 import React, { FC, useState } from 'react';
 import styles from './style.module.scss';
-import { theme } from 'setup/theme/theme';
 
 type Props = {
   Icon: any;
@@ -18,31 +17,18 @@ export const Item: FC<Props> = (props) => {
   return (
     <a
       href={link}
-      className={styles.menu_item}
+      className={active || focus ? styles.menu_item_active : styles.menu_item}
       onMouseEnter={() => setFocus(true)}
       onMouseLeave={() => setFocus(false)}
       style={{
-        backgroundColor: active ? theme.colors.grey[1] : theme.colors.white[0],
         padding: `10px ${isOpen ? '30px' : '15px'}`,
       }}
     >
-      <Icon
-        color={focus || active ? theme.colors.blue[0] : theme.colors.grey[0]}
-      />
+      <Icon className={styles.menu_item_icon} />
 
-      {isOpen && (
-        <span
-          className={styles.menu_item_text}
-          style={{
-            color:
-              focus || active ? theme.colors.blue[0] : theme.colors.grey[0],
-          }}
-        >
-          {text}
-        </span>
-      )}
+      {isOpen && <span className={styles.menu_item_text}>{text}</span>}
 
-      {active && <div className={styles.menu_item_active}></div>}
+      {active && <div className={styles.menu_item_column}></div>}
     </a>
   );
 };

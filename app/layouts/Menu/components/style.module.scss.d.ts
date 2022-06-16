@@ -3,6 +3,8 @@
 interface CssExports {
   'menu_item': string;
   'menu_item_active': string;
+  'menu_item_column': string;
+  'menu_item_icon': string;
   'menu_item_text': string;
 }
 export const cssExports: CssExports;

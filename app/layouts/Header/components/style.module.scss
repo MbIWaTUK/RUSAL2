@@ -16,10 +16,29 @@
   display: flex;
   align-items: center;
 }
+.container_content_icon {
+  path {
+    fill: #72818b;
+  }
+}
+.container_content_icon_active {
+  path {
+    fill: #05309e;
+  }
+}
 .container_content_language {
   margin: 0px 5px;
+  color: #72818b;
+}
+.container_content_language_active {
+  margin: 0px 5px;
+  color: #05309e;
 }
 .container_selectBlock {
+  display: none;
+}
+.container_selectBlock_active {
+  display: flex;
   background-color: #ffffff;
   border: 1px solid #f1f1f1;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16);

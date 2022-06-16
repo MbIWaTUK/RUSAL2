@@ -1,12 +1,43 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { Reload, Building } from 'assets/svg';
 import styles from './style.module.scss';
+import { FormattedMessage } from 'react-intl';
+import { messages } from './messages';
 
-export const AdvancedSearch = (props) => {
-  const { children, isOpen } = props;
+type Props = {
+  children: any;
+  isOpen: boolean;
+  handleClose: () => void;
+};
 
+export const AdvancedSearch: FC<Props> = ({
+  children,
+  isOpen,
+  handleClose,
+}) => {
   return (
-    <div className={styles.container} style={{ right: isOpen ? 300 : 0 }}>
-      {children}
-    </div>
+    <>
+      {isOpen && <div className={styles.base} onClick={handleClose}></div>}
+
+      <div className={isOpen ? styles.container_isOpen : styles.container}>
+        <div className={styles.container_header}>
+          <span className={styles.container_header_label}>
+            <FormattedMessage {...messages.label} />
+          </span>
+
+          <div className={styles.container_header_iconsBlock}>
+            <div className={styles.container_header_iconsBlock_container}>
+              <Reload />
+            </div>
+
+            <div className={styles.container_header_iconsBlock_container}>
+              <Building />
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.container_content}>{children}</div>
+      </div>
+    </>
   );
 };

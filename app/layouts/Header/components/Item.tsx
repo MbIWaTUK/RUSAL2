@@ -22,7 +22,11 @@ export const Item: FC<Props> = (props) => {
       onMouseLeave={() => setFocus(false)}
     >
       <Icon
-        color={focus || active ? theme.colors.primary[0] : theme.colors.grey[0]}
+        className={
+          focus || active
+            ? styles.header_btnBlog_item_icon_active
+            : styles.header_btnBlog_item_icon
+        }
       />
     </div>
   );

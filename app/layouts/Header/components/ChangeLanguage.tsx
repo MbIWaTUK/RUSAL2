@@ -21,31 +21,38 @@ export const ChangeLanguage = () => {
           onMouseLeave={() => setFocus(false)}
         >
           <Internet
-            color={
-              active || focus ? theme.colors.blue[0] : theme.colors.grey[0]
+            className={
+              active || focus
+                ? styles.container_content_icon_active
+                : styles.container_content_icon
             }
           />
 
           <span
-            className={styles.container_content_language}
-            style={{
-              color:
-                active || focus ? theme.colors.blue[0] : theme.colors.grey[0],
-            }}
+            className={
+              active || focus
+                ? styles.container_content_language_active
+                : styles.container_content_language
+            }
           >
             {language}
           </span>
 
           <ArrowDown
-            color={
-              active || focus ? theme.colors.blue[0] : theme.colors.grey[0]
+            className={
+              active || focus
+                ? styles.container_content_icon_active
+                : styles.container_content_icon
             }
           />
         </div>
 
         <div
-          className={styles.container_selectBlock}
-          style={{ display: `${active ? 'flex' : 'none'}` }}
+          className={
+            active
+              ? styles.container_selectBlock_active
+              : styles.container_selectBlock
+          }
         >
           <span
             className={styles.container_selectBlock_text}

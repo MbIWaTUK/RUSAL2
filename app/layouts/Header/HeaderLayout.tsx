@@ -17,8 +17,9 @@ export const HeaderLayout = () => {
       <div className={styles.header_btnBlog}>
         <ChangeLanguage />
 
-        {menuList.map((icon) => (
+        {menuList.map((icon, index) => (
           <Item
+            key={`${icon.id}-${index}`}
             Icon={icon.icon}
             id={icon.id}
             active={icon.id == active}

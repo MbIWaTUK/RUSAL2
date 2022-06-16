@@ -10,19 +10,19 @@ export const MenuLayout = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className={styles.menu} style={{ width: isOpen ? 330 : 50 }}>
+    <div className={isOpen ? styles.menu_isOpen : styles.menu}>
       <div className={styles.menu_arrow_block}>
         <div
-          className={styles.menu_arrow}
+          className={isOpen ? styles.menu_arrow_isOpen : styles.menu_arrow}
           onClick={() => setIsOpen(!isOpen)}
-          style={{ transform: isOpen ? 'rotate(0)' : 'rotate(180deg)' }}
         >
           <ArrowLeft />
         </div>
       </div>
 
-      {links.map((item) => (
+      {links.map((item, index) => (
         <Item
+          key={`${item.id}-${index}`}
           Icon={item.icon}
           link={item.link}
           text={item.text}
